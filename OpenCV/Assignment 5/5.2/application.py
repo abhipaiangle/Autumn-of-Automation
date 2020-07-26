@@ -3,7 +3,7 @@ import numpy as np
 import cv2
 
 
-img = cv2.imread("ball.png")
+img = cv2.imread("ball.jpg)
 cap = cv2.VideoCapture("messi.mp4")
 while True:
 	ret,img = cap.read()
