@@ -899,6 +899,24 @@ clean: beginner_tutorials/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clea
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory quaterions
+
+# Convenience name for "all" pass in the directory.
+quaterions/all:
+
+.PHONY : quaterions/all
+
+# Convenience name for "clean" pass in the directory.
+quaterions/clean:
+
+.PHONY : quaterions/clean
+
+# Convenience name for "preinstall" pass in the directory.
+quaterions/preinstall:
+
+.PHONY : quaterions/preinstall
+
+#=============================================================================
 # Directory level rules for directory turtlesim_cleaner
 
 # Convenience name for "all" pass in the directory.

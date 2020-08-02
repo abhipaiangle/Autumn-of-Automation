@@ -15,11 +15,15 @@ set(CMAKE_MAKEFILE_DEPENDS
   "catkin/catkin_generated/version/package.cmake"
   "catkin_generated/installspace/_setup_util.py"
   "catkin_generated/order_packages.cmake"
+  "quaterions/catkin_generated/ordered_paths.cmake"
+  "quaterions/catkin_generated/package.cmake"
   "turtlesim_cleaner/catkin_generated/ordered_paths.cmake"
   "turtlesim_cleaner/catkin_generated/package.cmake"
   "/home/abhipaiangle/catkin_ws/src/CMakeLists.txt"
   "/home/abhipaiangle/catkin_ws/src/beginner_tutorials/CMakeLists.txt"
   "/home/abhipaiangle/catkin_ws/src/beginner_tutorials/package.xml"
+  "/home/abhipaiangle/catkin_ws/src/quaterions/CMakeLists.txt"
+  "/home/abhipaiangle/catkin_ws/src/quaterions/package.xml"
   "/home/abhipaiangle/catkin_ws/src/turtlesim_cleaner/CMakeLists.txt"
   "/home/abhipaiangle/catkin_ws/src/turtlesim_cleaner/package.xml"
   "/opt/ros/kinetic/share/catkin/cmake/../package.xml"
@@ -178,6 +182,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "gtest/CMakeFiles/CMakeDirectoryInformation.cmake"
   "gtest/gtest/CMakeFiles/CMakeDirectoryInformation.cmake"
   "beginner_tutorials/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "quaterions/CMakeFiles/CMakeDirectoryInformation.cmake"
   "turtlesim_cleaner/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 

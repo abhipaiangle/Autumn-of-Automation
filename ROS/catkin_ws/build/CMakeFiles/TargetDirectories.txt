@@ -50,6 +50,13 @@
 /home/abhipaiangle/catkin_ws/build/beginner_tutorials/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir
 /home/abhipaiangle/catkin_ws/build/beginner_tutorials/CMakeFiles/std_msgs_generate_messages_py.dir
 /home/abhipaiangle/catkin_ws/build/beginner_tutorials/CMakeFiles/rosgraph_msgs_generate_messages_py.dir
+/home/abhipaiangle/catkin_ws/build/quaterions/CMakeFiles/list_install_components.dir
+/home/abhipaiangle/catkin_ws/build/quaterions/CMakeFiles/install.dir
+/home/abhipaiangle/catkin_ws/build/quaterions/CMakeFiles/rebuild_cache.dir
+/home/abhipaiangle/catkin_ws/build/quaterions/CMakeFiles/install/strip.dir
+/home/abhipaiangle/catkin_ws/build/quaterions/CMakeFiles/install/local.dir
+/home/abhipaiangle/catkin_ws/build/quaterions/CMakeFiles/test.dir
+/home/abhipaiangle/catkin_ws/build/quaterions/CMakeFiles/edit_cache.dir
 /home/abhipaiangle/catkin_ws/build/turtlesim_cleaner/CMakeFiles/install.dir
 /home/abhipaiangle/catkin_ws/build/turtlesim_cleaner/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir
 /home/abhipaiangle/catkin_ws/build/turtlesim_cleaner/CMakeFiles/geometry_msgs_generate_messages_eus.dir

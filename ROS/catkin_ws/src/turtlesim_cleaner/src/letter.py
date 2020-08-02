@@ -6,8 +6,11 @@ import time
 PI = 3.1415926535897
 
 
-def move(speed,distance,isForward):
-    pose_subscriber = rospy.Subscriber('turtle1/cmd_vel', Pose , update_pose)
+def move(speed,distance,isForward,vel_msg):
+    #rospy.init_node('move', anonymous=True)
+    rate = rospy.Rate(10)
+    velocity_publisher = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=10)
+   # pose_subscriber = rospy.Subscriber('turtle1/cmd_vel', Pose , update_pose)
 
     #Checking if the movement is forward or backwards
     if(isForward):
@@ -39,10 +42,13 @@ def move(speed,distance,isForward):
         vel_msg.linear.x = 0
         #Force the robot to stop
         velocity_publisher.publish(vel_msg)
-    
+        rate.sleep()
 
-def rotate(speed,angle,clockwise):
-    pose_subscriber = rospy.Subscriber('turtle1/cmd_vel', Pose , update_pose)
+def rotate(speed,angle,clockwise, vel_msg):
+    #rospy.init_node('rotate', anonymous=True)
+    rate = rospy.Rate(10)
+    velocity_publisher = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=10)
+    #pose_subscriber = rospy.Subscriber('turtle1/cmd_vel', Pose , update_pose)
     #Converting from angles to radians
     angular_speed = speed*2*PI/360
     relative_angle = angle*2*PI/360
@@ -72,31 +78,34 @@ def rotate(speed,angle,clockwise):
     #Forcing our robot to stop
     vel_msg.angular.z = 0
     velocity_publisher.publish(vel_msg)
-    rospy.spin()
+  #  rospy.spin()
+    rate.sleep()
 
-def update_pose(data):
-    pose = data
+def run():
+    # Testing our function
+    vel_msg = Twist()
+    rotate(30,60,0)
+    #   time.sleep(1)
+    move(1,2,1)
+    #   time.sleep(1)
+    rotate(30,120,1)
+    #  time.sleep(1)
+    move(1,2,1)
+    # time.sleep(1)
+    move(1,1,0)
+    #time.sleep(1)
+    rotate(30,120,1)
+    #time.sleep(1)
+    move(1,1,1)
+
+def run_final():
+    rospy.init_node('letter',anonymous = True)
+    rospy.Service('move',Move, run)
+    rospy.spin()
 
 
 if __name__ == '__main__':
     try:
-        # Testing our function
-        rospy.init_node('letter', anonymous=True)
-        velocity_publisher = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=10)
-        pose = Pose()
-        vel_msg = Twist()
-        rotate(30,60,0)
-        time.sleep(1)
-        move(1,2,1)
-        time.sleep(1)
-        rotate(30,120,1)
-        time.sleep(1)
-        move(1,2,1)
-        time.sleep(1)
-        move(1,1,0)
-        time.sleep(1)
-        rotate(30,120,1)
-        time.sleep(1)
-        move(1,1,1)
+        run_final()
     except rospy.ROSInterruptException:
         pass
